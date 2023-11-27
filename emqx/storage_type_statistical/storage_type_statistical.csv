@@ -1,0 +1,40 @@
+Name, class, Type,Persistence, local, Owner, Write, Read, Description
+bpapi, mira, set, ram, false, emqx_bpapi, -, -, RPC version control
+emqx_activated_alarm, mria, ordered_set, disc, true, emqx_alarm, -, -, -
+emqx_deactivated_alarm, mria, ordered_set, disc, true, emqx_alarm, -, -, -
+emqx_banned, mria, set, disc, false, emqx_banned, Low, High, -
+emqx_channel_registry,mria, bag, ram, false, emqx_cm_registry, -, -, -
+emqx_exclusive_subscription, mria, set, ram, false, emqx_exclusive_subscription, Low, Low, Who exclusively owns a certain topic
+emqx_ds_session, mria, set, rocksdb/disc, false, emqx_persistent_session_ds, -, -, -
+emqx_ds_session_subscriptions, mria, ordered_set, rocksdb/disc, false, emqx_persistent_session_ds, -, -, -
+emqx_ds_stream_tab, mria, bag, rocksdb/disc, false, emqx_persistent_session_ds, -, -, -
+emqx_ds_pubrange_tab, mria,  ordered_set, rocksdb/disc, false, emqx_persistent_session_ds, -, -, -
+emqx_route, mria, bag, ram, false, emqx_route, -, High, -
+emqx_route_filters, mria, ordered_set, ram, false, emqx_route, -, -, -
+emqx_routing_node, mria, set, ram, false, emqx_router_helper, -, -, -
+emqx_shared_subscription, mria, bag, ram, false, emqx_shared_sub, -, High, -
+emqx_trace,mria,set,disc, false, emqx_trace, -,-, -
+emqx_trie,mria,ordered_set,ram, false, emqx_trie, -, High, -
+emqx_audit,mria,ordered_set,disc,false, emqx_audit, -, -, -
+emqx_authn_mnesia, mria,ordered_set,disc,false, emqx_authn_mnesia, -, -, -
+emqx_authn_scram_mnesia, mria, ordered_set, disc, false, emqx_authn_scram_mnesia, -, -, -
+emqx_authz_mneisa, mria, ordered_set, disc, false, emqx_authz_mneisa, -, -, -
+cluster_rpc_mfa,mria,ordered_set,disc, false, emqx_cluster_rpc, -, -, -
+cluster_rpc_commit,mria,ordered_set,disc, false, emqx_cluster_rpc, -, -, -
+emqx_admin,mria, set,disc,false,emqx_dashboard_admin, Low, Low, Dashboard users list
+emqx_dashboard_monitor, mria, set, disc, false, emqx_dashboard_monitor, -, -, -
+emqx_admin_jwt,mria,set,disc,false, emqx_dashboard_token, Low, Low, Tokens of the logged users
+emqx_ds_builtin_metadata_shard,mria,ordered_set,rocksdb,false,emqx_ds_replication_layer_meta,-,-,-
+emqx_ds_builtin_node_tab,mria,ordered_set,rocksdb,false,emqx_ds_replication_layer_meta,-,-,-
+emqx_ds_builtin_shard_tab,mria,ordered_set,ram,false,emqx_ds_replication_layer_meta,-,-,-
+emqx_gateway_NAME_channel_registry,mria,bag,ram,false,emqx_gateway_cm_registry,-,-,-
+emqx_gcp_device, mria,ordered_set,disc,false,emqx_gcp_device, -, -,-
+emqx_app,mria,set,disc,false,emqx_mgmt_auth,-,-,REST API Keys
+emqx_delayed,mria,ordered_set,disc,true,emqx_delayed, -, -,-
+emqx_psk,mria,ordered_set,disc,false,emqx_psk, -, -,-
+emqx_retainer_index_meta,mria,set,ram/disc,false,emqx_retainer,-,-,-
+emqx_retainer_message,mria,set,ram/disc,false,emqx_retainer,-,--,
+emqx_retainer_index,mria,set,ram/disc,false,emqx_retainer,-,-,-
+emqx_ee_schema_registry_serde_tab,mria,ordered_set,ram,false,emqx_schema_registry,-,-,-
+emqx_ee_schema_registry_protobuf_cache_tab,mria,set,rocksdb,false,emqx_schema_registry,-,-,-
+emqx_telemetry,mria,set,dics,false,emqx_telemetry,-,-,-
